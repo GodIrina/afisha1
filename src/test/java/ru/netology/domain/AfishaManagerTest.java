@@ -19,13 +19,12 @@ class AfishaManagerTest {
     Movie eleven = new Movie(11, "Парни под прикрытием", "Боевик");
 
 
-
     @Test
     void addFilm() {
         AfishaManager afishaManager = new AfishaManager(0);
         afishaManager.add(first);
-        Movie[]expected = new Movie[] {first};
-        Movie[]actual = afishaManager.findAll();
+        Movie[] expected = new Movie[]{first};
+        Movie[] actual = afishaManager.findAll();
         assertArrayEquals(expected, actual);
     }
 
@@ -36,19 +35,20 @@ class AfishaManagerTest {
         afishaManager.add(second);
         afishaManager.add(third);
         afishaManager.add(fourth);
-        Movie[] expected = new Movie[]{fourth,third,second,first};
-        Movie[]actual = afishaManager.findAll();
-        assertArrayEquals(expected,actual);
+        Movie[] expected = new Movie[]{fourth, third, second, first};
+        Movie[] actual = afishaManager.findAll();
+        assertArrayEquals(expected, actual);
 
 
     }
+
     @Test
     void findAll2() {
         AfishaManager afishaManager = new AfishaManager(1);
         afishaManager.add(first);
 
 
-        Movie[] expected = new Movie[] { first };
+        Movie[] expected = new Movie[]{first};
         Movie[] actual = afishaManager.findAll();
 
         assertArrayEquals(expected, actual);
@@ -65,11 +65,12 @@ class AfishaManagerTest {
         afishaManager.add(sixth);
         afishaManager.add(seventh);
 
-        Movie[] expected = new Movie[] {seventh, sixth, fifth, fourth, third };
+        Movie[] expected = new Movie[]{seventh, sixth, fifth, fourth, third};
         Movie[] actual = afishaManager.findLast();
 
         assertArrayEquals(expected, actual);
     }
+
     @Test
     void shouldFindLastThanMoreNumberOfFilm() {
         AfishaManager afishaManager = new AfishaManager();
@@ -85,7 +86,7 @@ class AfishaManagerTest {
         afishaManager.add(tenth);
         afishaManager.add(eleven);
 
-        Movie[] expected = new Movie[] {eleven, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second };
+        Movie[] expected = new Movie[]{eleven, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
         Movie[] actual = afishaManager.findLast();
 
         assertArrayEquals(expected, actual);
@@ -98,7 +99,7 @@ class AfishaManagerTest {
         afishaManager.add(second);
         afishaManager.add(third);
 
-        Movie[] expected = new Movie[] { third, second, first };
+        Movie[] expected = new Movie[]{third, second, first};
         Movie[] actual = afishaManager.findLast();
 
         assertArrayEquals(expected, actual);

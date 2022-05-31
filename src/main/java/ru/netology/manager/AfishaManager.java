@@ -1,6 +1,6 @@
 package ru.netology.manager;
-import ru.netology.domain.Movie;
 
+import ru.netology.domain.Movie;
 
 
 public class AfishaManager {
