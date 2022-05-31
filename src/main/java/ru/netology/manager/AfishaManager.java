@@ -1,12 +1,16 @@
-package ru.netology.domain;
+package ru.netology.manager;
+
+
+import lombok.NoArgsConstructor;
+import ru.netology.domain.Movie;
+
+@NoArgsConstructor
 
 public class AfishaManager {
 
     private Movie[] movies = new Movie[0];
     private int numberFilm = 10;
 
-    public AfishaManager() {
-    }
 
     public AfishaManager(int numberFilm) {
         this.numberFilm = numberFilm;

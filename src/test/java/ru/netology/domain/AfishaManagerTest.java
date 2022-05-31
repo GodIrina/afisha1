@@ -1,6 +1,7 @@
 package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
+import ru.netology.manager.AfishaManager;
 
 import static org.junit.jupiter.api.Assertions.*;
 
